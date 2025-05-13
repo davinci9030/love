@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love You My Potato</title>
+  <style>
+    body {
+      background: #fff0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    svg {
+      width: 150px;
+      height: 150px;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    #message {
+      margin-top: 40px;
+      color: #cc0000;
+      font-size: 2em;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+    #message.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <svg viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg" fill="red">
+    <path d="M23.6,0c-3.4,0-6.4,2.2-7.6,5.3C14.8,2.2,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4
+    c0,9.6,16,21.2,16,21.2s16-11.6,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+  </svg>
+
+  <h1 id="message">Love you my potato</h1>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('message').classList.add('show');
+    }, 1500);
+  </script>
+
+</body>
+</html>
